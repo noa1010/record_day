@@ -11,6 +11,8 @@ html, body {
   background-size: cover;
    background-size: 100% 600px;
    position: relative;
+  background-color: #30064e;
+
 }
 
 /* עיצוב תפריט הבאר העליון */
@@ -103,7 +105,7 @@ li a:hover {
   font-size: 80px !important;
   color:#7a4e99;
   z-index: 90;
-  top:100px;
+  /* top:100px; - הוסר כי כבר לא ב-position: absolute */
   text-align: center;
 }
 .background{
@@ -120,7 +122,7 @@ li a:hover {
   font-weight: 500;
   font-style: normal;
   text-align: center;
-  top: 90px;
+  /* top: 90px; - הוסר כי כבר לא ב-position: absolute */
 }
 
 
@@ -157,15 +159,225 @@ height: 700px;
 position: absolute;
 }
 .presentation_img{
-  position: absolute;
-  top: 650px;
-  right: 100px;
+  /* position: absolute; - הוסר! */
+  /* top: 650px; - הוסר! */
+  display: block; /* כדי להסיר רווחים מיותרים מתחת לתמונה */
+  margin: 20px auto; /* למרכז את התמונה ולתת קצת מרווח */
   width: auto;
-  height: 500px;
+  height: 470px;
+      border-radius: 8px;
+
 }
+
+/* כלל חדש עבור העוטף */
+.header-content {
+  text-align: center; /* למרכז את התוכן בתוך ה-header-content */
+  padding-top: 180px; /* מרווח מהחלק העליון (מתחת ל-navbar) */
+  margin-bottom: 50px; /* מרווח מתחת לכל החלק הזה לפני הקונטיינר */
+}
+
+
 .h3{
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
 
 }
+
+
+
+
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto; /* למרכז את הקונטיינר */
+    margin-bottom: 50px; /* מרווח תחתון מה-body */
+}
+
+h1 {
+    color: #30064e;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+h2 {
+    color: #61397d;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+.search-box, .summarize-box { /* סגנון משותף לשתי תיבות הקלט */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#searchInput, #linkInput { /* סגנון משותף לשדות הקלט */
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+#searchButton, #summarizeButton { /* סגנון משותף לכפתורים */
+    padding: 12px 20px;
+    background-color: #9d00ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px; /* רווח מימין לשדה הקלט */
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover, #summarizeButton:hover {
+    background-color: #490175;
+}
+
+.results-container {
+    text-align: right;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.result-item {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.result-item h3 {
+    margin-top: 0;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.result-item p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.result-item a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.result-item a:hover {
+    text-decoration: underline;
+}
+
+.no-results {
+    color: #777;
+    font-size: 16px;
+    text-align: center; /* כדי שיופיע במרכז כשאין תוצאות */
+    padding: 10px;
+}
+
+.summary-content {
+    background-color: #e6f7ff;
+    border: 1px solid #b3e0ff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: right;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+
+
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* זה ממורכז את התמונות בתוך הגלריה */
+    gap: 10px;
+    width: 100%; /* וודא שהוא תופס את כל הרוחב הזמין בתוך ההורה שלו */
+    margin: 0 auto; /* לוודא מרכוז עצמי אם לא כל הרוחב תפוס */
+}
+
+
+        .image-wrapper {
+          
+            /* מיכל עוטף לכל תמונה כדי לשלוט במידות בלי לשנות את התמונה עצמה */
+            width: calc(20% - 16px); /* 5 תמונות בשורה - חישוב דומה לקודם */
+            max-width: 280px; /* רוחב מקסימלי לכל עוטף, כדי לשמר את גודל התמונה המקורי ככל הניתן */
+            overflow: hidden; /* לוודא שהתמונה לא בולטת מהמסגרת אם גדולה מדי */
+            border: 2px solid #9d00ff;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+            box-sizing: border-box;
+            display: flex; /* לשימוש ב-flexbox פנימי ליישור התמונה */
+            justify-content: center; /* למרכז תמונה אם היא קטנה מה-wrapper */
+            align-items: center;
+        }
+
+        .clickable-image {
+            width: 100%; /* התמונה תתאים לרוחב של העוטף שלה */
+            height: auto; /* שמירה על פרופורציות */
+            display: block; /* כדי להסיר רווחים מיותרים */
+        }
+
+        .image-wrapper:hover {
+            transform: scale(1.05);
+            border-color: #490175;
+        }
+
+        /* רספונסיביות */
+        @media (max-width: 1024px) {
+            .image-wrapper {
+                width: calc(25% - 15px); /* 4 תמונות בשורה */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .image-wrapper {
+                width: calc(33.333% - 13.333px); /* 3 תמונות בשורה */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-wrapper {
+                width: calc(50% - 10px); /* 2 תמונות בשורה בטלפון */
+            }
+        }
+
+        @media (max-width: 320px) {
+            .image-wrapper {
+                width: 100%; /* תמונה אחת בשורה במסכים ממש קטנים */
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .container {
+              max-width: 380px;
+            }
+        }
