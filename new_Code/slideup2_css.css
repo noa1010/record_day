@@ -169,3 +169,13 @@ position: absolute;
   font-style: normal;
 
 }
+.steps_Img{
+    width: 411.31px;
+    height: 411.31px;
+    margin-top:200px
+      z-index: 100;
+}
+.steps_div{
+  color: red;
+  z-index: 99;
+}
