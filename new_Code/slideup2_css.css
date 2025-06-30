@@ -9,10 +9,9 @@ html, body {
   background-image: url("../media/background.png");
   background-repeat: no-repeat;
   background-size: cover;
-   background-size: 100% 600px;
-   position: relative;
+  background-size: 100% 600px;
+  position: relative;
   background-color: #30064e;
-
 }
 
 /* עיצוב תפריט הבאר העליון */
@@ -22,16 +21,16 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 15.5%;
+  height: 15.5%; /* ישתנה ברספונסיביות */
   margin: 0;
   padding: 0;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: flex-start; /* מיישר את כל התוכן לשמאל */
-  overflow: hidden;
+  overflow: hidden; /* נשנה את זה ברספונסיביות עבור תפריט נפתח */
   z-index: 9999;
-  transition: background-color 0.3s, box-shadow 0.3s; /* הוספתי: מעבר חלק לשינויים */
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 /* --------- שינויים שהוספתי עבור hover של הבאר --------- */
@@ -54,7 +53,7 @@ html, body {
 
 /* עיצוב פריטי הרשימה */
 li {
-  display: inline-block;
+  display: inline-block; /* ברירת מחדל: אופקי */
 }
 
 /* עיצוב הקישורים בתפריט */
@@ -63,7 +62,7 @@ li a {
   color: black;
   padding: 14px 30px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 20px; /* גודל גופן בסיסי */
   transition: 0.3s;
 }
 
@@ -76,10 +75,9 @@ li a:hover {
 #img1 {
   margin-right: 20px;
   height: 150px;
-
 }
 
-/* עיצוב הכפתורים בתוך הבאר */
+/* הסתרת כפתורים ב-ul1 - כנראה הכוונה לכפתורי כניסה/הרשמה שלא קיימים כרגע בקוד HTML */
 .ul1 button {
   background-color: #333;
   color: white;
@@ -98,14 +96,13 @@ li a:hover {
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 .title{
- font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: italic;
-  font-size: 80px !important;
+  font-size: 80px !important; /* גודל גופן בסיסי לכותרת */
   color:#7a4e99;
   z-index: 90;
-  /* top:100px; - הוסר כי כבר לא ב-position: absolute */
   text-align: center;
 }
 .background{
@@ -113,18 +110,15 @@ li a:hover {
   z-index: 1;
   position: relative;
   background-repeat: no-repeat;
-  height: 100vh; 
-
+  height: 100vh;
 }
 .h3{
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   text-align: center;
-  /* top: 90px; - הוסר כי כבר לא ב-position: absolute */
 }
-
 
 /* Cursor */
 .cursor{
@@ -136,12 +130,12 @@ li a:hover {
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    transform: translateY(-50%);    
+    transform: translateY(-50%);
 }
 /* Animation */
 .typewriter-animation {
-  animation: 
-    typewriter 5s steps(50) 1s 1 normal both, 
+  animation:
+    typewriter 5s steps(50) 1s 1 normal both,
     blinkingCursor 500ms steps(50) infinite normal;
 }
 @keyframes typewriter {
@@ -153,20 +147,18 @@ li a:hover {
   to { border-right-color: transparent; }
 }
 #background2{
-margin-top:300px;
-width: 100%;
-height: 700px;
-position: absolute;
+  margin-top:300px;
+  width: 100%;
+  height: 700px;
+  position: absolute;
 }
 .presentation_img{
-  /* position: absolute; - הוסר! */
-  /* top: 650px; - הוסר! */
   display: block; /* כדי להסיר רווחים מיותרים מתחת לתמונה */
   margin: 20px auto; /* למרכז את התמונה ולתת קצת מרווח */
   width: auto;
-  height: 470px;
-      border-radius: 8px;
-
+  height: 470px; /* גובה בסיסי */
+  border-radius: 8px;
+  max-width: 90%; /* כדי שהתמונה לא תחרוג מהרוחב */
 }
 
 /* כלל חדש עבור העוטף */
@@ -174,6 +166,8 @@ position: absolute;
   text-align: center; /* למרכז את התוכן בתוך ה-header-content */
   padding-top: 180px; /* מרווח מהחלק העליון (מתחת ל-navbar) */
   margin-bottom: 50px; /* מרווח מתחת לכל החלק הזה לפני הקונטיינר */
+  padding-left: 15px; /* מרווח פנימי מהצדדים */
+  padding-right: 15px; /* מרווח פנימי מהצדדים */
 }
 
 
@@ -181,12 +175,7 @@ position: absolute;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
-
 }
-
-
-
-
 
 .container {
     background-color: #fff;
@@ -197,13 +186,13 @@ position: absolute;
     max-width: 700px;
     margin: 0 auto; /* למרכז את הקונטיינר */
     margin-bottom: 50px; /* מרווח תחתון מה-body */
+    box-sizing: border-box; /* לוודא שה-padding לא מוסיף לרוחב הכללי */
 }
 
 h1 {
     color: #30064e;
     margin-bottom: 20px;
     text-align: center;
-
 }
 
 h2 {
@@ -225,15 +214,18 @@ hr {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    flex-wrap: wrap; /* כדי שהאלמנטים יעברו שורה במובייל */
 }
 
 #searchInput, #linkInput { /* סגנון משותף לשדות הקלט */
     width: 70%;
+    max-width: 450px; /* רוחב מקסימלי */
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
     outline: none;
+    box-sizing: border-box; /* כדי שה-padding לא יוסיף לרוחב */
 }
 
 #searchButton, #summarizeButton { /* סגנון משותף לכפתורים */
@@ -309,10 +301,6 @@ hr {
     line-height: 1.6;
 }
 
-
-
-
-
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
@@ -322,62 +310,254 @@ hr {
     margin: 0 auto; /* לוודא מרכוז עצמי אם לא כל הרוחב תפוס */
 }
 
+.image-wrapper {
+  width: calc(20% - 16px);
+  max-width: 280px;
+  overflow: hidden;
+  border: 2px solid #9d00ff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-        .image-wrapper {
-          
-            /* מיכל עוטף לכל תמונה כדי לשלוט במידות בלי לשנות את התמונה עצמה */
-            width: calc(20% - 16px); /* 5 תמונות בשורה - חישוב דומה לקודם */
-            max-width: 280px; /* רוחב מקסימלי לכל עוטף, כדי לשמר את גודל התמונה המקורי ככל הניתן */
-            overflow: hidden; /* לוודא שהתמונה לא בולטת מהמסגרת אם גדולה מדי */
-            border: 2px solid #9d00ff;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
-            box-sizing: border-box;
-            display: flex; /* לשימוש ב-flexbox פנימי ליישור התמונה */
-            justify-content: center; /* למרכז תמונה אם היא קטנה מה-wrapper */
-            align-items: center;
-        }
+.clickable-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
-        .clickable-image {
-            width: 100%; /* התמונה תתאים לרוחב של העוטף שלה */
-            height: auto; /* שמירה על פרופורציות */
-            display: block; /* כדי להסיר רווחים מיותרים */
-        }
+.image-wrapper:hover {
+    transform: scale(1.05);
+    border-color: #490175;
+}
 
-        .image-wrapper:hover {
-            transform: scale(1.05);
-            border-color: #490175;
-        }
+/* ************ שינויים עבור תפריט המבורגר ************ */
 
-        /* רספונסיביות */
-        @media (max-width: 1024px) {
-            .image-wrapper {
-                width: calc(25% - 15px); /* 4 תמונות בשורה */
-            }
-        }
+/* הסתרת כפתור ההמבורגר כברירת מחדל במסכים גדולים */
+.ul1 .icon {
+  display: none;
+}
 
-        @media (max-width: 768px) {
-            .image-wrapper {
-                width: calc(33.333% - 13.333px); /* 3 תמונות בשורה */
-            }
-        }
+/* עוטף הקישורים */
+.nav-links {
+  display: flex; /* כדי שהקישורים יהיו אופקיים בדסקטופ */
+  align-items: center;
+  /* שינויים: הסרנו flex-grow: 1; ושינינו justify-content */
+  justify-content: flex-start; /* יישור לימין */
+}
 
-        @media (max-width: 480px) {
-            .image-wrapper {
-                width: calc(50% - 10px); /* 2 תמונות בשורה בטלפון */
-            }
-        }
+/* הלינקים עצמם בתוך העוטף */
+.nav-links li {
+  margin: 0; /* איפוס מרווחים מלי ברירת מחדל */
+}
 
-        @media (max-width: 320px) {
-            .image-wrapper {
-                width: 100%; /* תמונה אחת בשורה במסכים ממש קטנים */
-            }
-        }
+/* ************ סיום שינויים עבור תפריט המבורגר ************ */
 
 
-        @media (max-width: 768px) {
-            .container {
-              max-width: 380px;
-            }
-        }
+/* רספונסיביות */
+@media (max-width: 1200px) {
+  .ul1 {
+    height: 12%;
+  }
+  #img1 {
+    height: 100px;
+  }
+  li a {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+  .ul1 button { /* אם יש כפתורים כלשהם */
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  .title {
+    font-size: 60px !important;
+  }
+  .header-content {
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ul1 {
+    height: 10%;
+  }
+  #img1 {
+    height: 80px;
+    margin-right: 15px;
+  }
+  li a {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+  .ul1 button {
+    padding: 8px 15px;
+    font-size: 16px;
+  }
+  .title {
+    font-size: 50px !important;
+  }
+  .header-content {
+    padding-top: 130px;
+  }
+  .image-wrapper {
+      width: calc(25% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .ul1 {
+    /* גובה אוטומטי כשנפתח */
+    height: auto;
+    /* במובייל הופך להיות Flex Column */
+    flex-direction: column;
+    align-items: flex-start; /* יישור לשמאל בהמבורגר */
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    overflow: visible; /* מאפשר לתפריט להיפתח */
+  }
+
+  .ul1 #img1 {
+    height: 60px;
+    margin: 10px 15px; /* מרווח מהצדדים ומהלוגו */
+  }
+
+  /* כפתור ההמבורגר גלוי רק במובייל */
+  .ul1 .icon {
+    display: block; /* הצגה */
+    position: absolute; /* מיקום מוחלט ביחס ל-ul1 */
+    right: 20px; /* בצד ימין */
+    top: 20px; /* בחלק העליון */
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px; /* מרווח סביב לאייקון */
+  }
+
+  /* הסתרת הקישורים כברירת מחדל במובייל */
+  .nav-links {
+    display: none;
+    flex-direction: column; /* הקישורים בטור כשהם גלויים */
+    width: 100%; /* יתפסו את כל הרוחב */
+    text-align: center; /* מרכז טקסט */
+  }
+
+  /* כשהתפריט פתוח (nav-links.responsive) */
+  .nav-links.responsive {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%; /* כל לינק יתפרס על כל הרוחב */
+  }
+
+  .nav-links li a {
+    padding: 10px 0; /* ריווח ללינקים בתפריט המבורגר */
+    font-size: 18px;
+    border-bottom: 1px solid #eee; /* קו הפרדה בין לינקים */
+  }
+
+  /* הסרת קו הפרדה מהלינק האחרון */
+  .nav-links li:last-child a {
+    border-bottom: none;
+  }
+
+  .title{
+    font-size: 40px !important;
+  }
+  .header-content {
+    padding-top: 100px;
+  }
+  .presentation_img{
+    height: 300px;
+  }
+  .container {
+    max-width: 380px;
+    padding: 20px;
+  }
+  #searchInput, #linkInput {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  #searchButton, #summarizeButton {
+    width: 90%;
+    margin-left: 0;
+  }
+  .search-box, .summarize-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-wrapper {
+      width: calc(33.333% - 13.333px);
+  }
+}
+
+@media (max-width: 480px) {
+  .ul1 #img1 {
+    height: 50px;
+  }
+  .ul1 .icon {
+    top: 15px;
+    right: 15px;
+    font-size: 26px;
+  }
+  .nav-links li a {
+    font-size: 16px;
+  }
+  .title {
+    font-size: 30px !important;
+  }
+  .h3 {
+    font-size: 16px;
+  }
+  .cursor {
+    font-size: 20px;
+    width: 100%;
+  }
+  .presentation_img {
+    height: 200px;
+  }
+  .container {
+    padding: 15px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .image-wrapper {
+      width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 320px) {
+  .ul1 #img1 {
+    height: 40px;
+  }
+  .ul1 .icon {
+    font-size: 24px;
+  }
+  .nav-links li a {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 25px !important;
+  }
+  .h3 {
+    font-size: 14px;
+  }
+  .cursor {
+    font-size: 18px;
+  }
+  .image-wrapper {
+      width: 100%;
+  }
+}

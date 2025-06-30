@@ -7,10 +7,16 @@ window.addEventListener("scroll", function() {
   }
 });
 
-
-
-
-
+// ************ פונקציית המבורגר חדשה ************
+function toggleMenu() {
+  var navLinks = document.querySelector(".nav-links");
+  if (navLinks.classList.contains("responsive")) {
+    navLinks.classList.remove("responsive");
+  } else {
+    navLinks.classList.add("responsive");
+  }
+}
+// ************ סיום פונקציית המבורגר ************
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -44,7 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
     async function performSearch() {
         const query = searchInput.value.trim();
         if (!query) {
-            resultsContainer.innerHTML = '<p class="no-results">Please enter a search topic.</p>';            return;
+            resultsContainer.innerHTML = '<p class="no-results">Please enter a search topic.</p>';
+            return;
         }
 
         resultsContainer.innerHTML = '<p class="no-results">looking for...</p>'; // מרכז את הודעת הטעינה
@@ -88,7 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 resultsContainer.appendChild(resultItem);
             });
         } else {
-            resultsContainer.innerHTML = '<p class="no-results">No results were found for your search.</p>';        }
+            resultsContainer.innerHTML = '<p class="no-results">No results were found for your search.</p>';
+        }
     }
 
     // --- פונקציית סיכום חדשה ---
@@ -103,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // לדוגמה: מ-https://en.wikipedia.org/wiki/JavaScript נחלץ JavaScript
         const wikipediaTitleMatch = link.match(/\/wiki\/(.+)/);
         if (!wikipediaTitleMatch || wikipediaTitleMatch[1].includes(':')) { // למנוע קישורי קטגוריה/תבנית
-        summaryResultsContainer.innerHTML = '<p class="no-results">Wikipedia link is invalid. Please make sure it points directly to the entry (for example: https://en.wikipedia.org/wiki/JavaScript).</p>';
+            summaryResultsContainer.innerHTML = '<p class="no-results">Wikipedia link is invalid. Please make sure it points directly to the entry (for example: https://en.wikipedia.org/wiki/JavaScript).</p>';
             return;
         }
         const articleTitle = decodeURIComponent(wikipediaTitleMatch[1]).replace(/_/g, ' '); // החלפת קווים תחתונים ברווחים
@@ -124,7 +132,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             displaySummary(articleTitle, extract);
         } catch (error) {
-            console.error('Error accessing Wikipedia API (summary):', error);            summaryResultsContainer.innerHTML = '<p class="no-results">There was an error retrieving the summary. Please make sure the link is correct and try again.</p>';
+            console.error('Error accessing Wikipedia API (summary):', error);
+            summaryResultsContainer.innerHTML = '<p class="no-results">There was an error retrieving the summary. Please make sure the link is correct and try again.</p>';
         }
     }
 
@@ -150,14 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
-
-
-
-
-
-
-
-
 
 
 function img1(){
@@ -190,5 +191,3 @@ function img2(){
  function img10(){
   window.location.href = ""; // נווט לקישור
 }
-            
-
