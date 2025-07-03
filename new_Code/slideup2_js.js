@@ -160,43 +160,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
 function img1(){
-  window.location.href = ""; // נווט לקישור
+  window.location.href = "https://www.canva.com/design/DAGrMVVhAlQ/5lbKRGyWDd8TvptQs5Wl_g/edit?utm_content=DAGrMVVhAlQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"; // נווט לקישור
 }
 function img2(){
-  window.location.href = ""; // נווט לקישור
+  window.location.href = "https://www.canva.com/design/DAGrMTm_Sf4/9I8K4ClwO1aGVqYNY4mQYg/edit?utm_content=DAGrMTm_Sf4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"; // נווט לקישור
 }
  function img3(){
-  window.location.href = ""; // נווט לקישור
+  window.location.href = "https://www.canva.com/design/DAGrMfpfBp4/AqM0UQqgA2x96OvKJEJ1vA/edit?utm_content=DAGrMfpfBp4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"; // נווט לקישור
 }
  function img4(){
-  window.location.href = ""; // נווט לקישור
+  window.location.href = "https://www.canva.com/design/DAGrMdhM0iE/YXv8fatMyFtCoN9NHtSdkQ/edit?utm_content=DAGrMdhM0iE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"; // נווט לקישור
 }
  function img5(){
-  window.location.href = ""; // נווט לקישור
+  window.location.href = "https://www.canva.com/design/DAGrMqigeSc/6C1zTloVt_gmxmJh3I6nKQ/edit?utm_content=DAGrMqigeSc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"; // נווט לקישור
 }
  function img6(){
-  window.location.href = ""; // נווט לקישור
+  window.location.href = "https://www.canva.com/design/DAGrMrr6xIc/1eZy9N7aufJOqkeGTGWZ9Q/edit?utm_content=DAGrMrr6xIc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"; // נווט לקישור
 }
  function img7(){
-  window.location.href = ""; // נווט לקישור
+  window.location.href = "https://www.canva.com/design/DAGrMjbdC_Q/cqPdjUhEiN5er2BWqr1lYw/edit?utm_content=DAGrMjbdC_Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"; // נווט לקישור
 }
  function img8(){
-  window.location.href = ""; // נווט לקישור
+  window.location.href = "https://www.canva.com/design/DAGrMqdr2Sw/nSpF1-V95aQiJ3TnQgyspA/edit?utm_content=DAGrMqdr2Sw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"; // נווט לקישור
 }
  function img9(){
-  window.location.href = ""; // נווט לקישור
+  window.location.href = "https://www.canva.com/design/DAGrMcRnb8g/EwapS7nvnzx-g3eXhx1caA/edit?utm_content=DAGrMcRnb8g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"; // נווט לקישור
 }
  function img10(){
-  window.location.href = ""; // נווט לקישור
+  window.location.href = "https://www.canva.com/design/DAGsGjO43RE/X9-m9ZhohnrB73bMphhtJA/edit?utm_content=DAGsGjO43RE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"; // נווט לקישור
 }
-//   const accordions = document.querySelectorAll('.accordion');
-//   accordions.forEach((acc, i) => {
-//     acc.addEventListener('click', () => {
-//       const content = acc.nextElementSibling;
-//       const arrow = acc.querySelector('.arrow');
-//       content.classList.toggle('open');
-//       arrow.classList.toggle('open');
-//     });
-//   });
