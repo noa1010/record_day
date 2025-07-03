@@ -7,10 +7,11 @@ html, body {
   font-optical-sizing: auto;
   font-style: normal;
   background-image: url("../media/background.png");
-  background-repeat: no-repeat;
+    background-repeat: no-repeat;
   background-size: cover;
-   background-size: 100% 600px;
-   position: relative;
+  background-size: 100% 600px;
+  position: relative;
+  ;
 }
 
 /* עיצוב תפריט הבאר העליון */
@@ -20,16 +21,16 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 15.5%;
+  height: 15.5%; /* ישתנה ברספונסיביות */
   margin: 0;
   padding: 0;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: flex-start; /* מיישר את כל התוכן לשמאל */
-  overflow: hidden;
+  overflow: hidden; /* נשנה את זה ברספונסיביות עבור תפריט נפתח */
   z-index: 9999;
-  transition: background-color 0.3s, box-shadow 0.3s; /* הוספתי: מעבר חלק לשינויים */
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 /* --------- שינויים שהוספתי עבור hover של הבאר --------- */
@@ -52,7 +53,7 @@ html, body {
 
 /* עיצוב פריטי הרשימה */
 li {
-  display: inline-block;
+  display: inline-block; /* ברירת מחדל: אופקי */
 }
 
 /* עיצוב הקישורים בתפריט */
@@ -61,7 +62,7 @@ li a {
   color: black;
   padding: 14px 30px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 20px; /* גודל גופן בסיסי */
   transition: 0.3s;
 }
 
@@ -74,10 +75,9 @@ li a:hover {
 #img1 {
   margin-right: 20px;
   height: 150px;
-
 }
 
-/* עיצוב הכפתורים בתוך הבאר */
+/* הסתרת כפתורים ב-ul1 - כנראה הכוונה לכפתורי כניסה/הרשמה שלא קיימים כרגע בקוד HTML */
 .ul1 button {
   background-color: #333;
   color: white;
@@ -96,34 +96,49 @@ li a:hover {
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 .title{
- font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: italic;
-  font-size: 80px !important;
+  font-size: 80px !important; /* גודל גופן בסיסי לכותרת */
   color:#7a4e99;
   z-index: 90;
-  top:100px;
   text-align: center;
 }
 .background{
   width: 100%;
-  z-index: 1;
+  /* z-index: 1; */
   position: relative;
   background-repeat: no-repeat;
-  height: 100vh; 
-
+  height: 100vh;
 }
+.background2 {
+  width: 100%;
+  /* z-index: 1; */
+  position: relative;
+  background-repeat: no-repeat;
+  height: 100vh;
+ }
+
 .h3{
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   text-align: center;
-  top: 90px;
 }
-
-
+#Ready{
+  color: white;
+  z-index: 999;
+  margin-top: -200px;
+  margin-left: -800px;
+  position: relative;
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 80px !important; 
+}
 /* Cursor */
 .cursor{
     position: relative;
@@ -134,14 +149,15 @@ li a:hover {
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    transform: translateY(-50%);    
+    transform: translateY(-50%);
 }
 /* Animation */
 .typewriter-animation {
-  animation: 
-    typewriter 5s steps(50) 1s 1 normal both, 
+  animation:
+    typewriter 5s steps(50) 1s 1 normal both,
     blinkingCursor 500ms steps(50) infinite normal;
 }
+
 @keyframes typewriter {
   from { width: 0; }
   to { width: 100%; }
@@ -150,32 +166,715 @@ li a:hover {
   from { border-right-color: rgba(255,255,255,.75); }
   to { border-right-color: transparent; }
 }
-#background2{
-margin-top:300px;
-width: 100%;
-height: 700px;
-position: absolute;
-}
 .presentation_img{
-  position: absolute;
-  top: 650px;
-  right: 100px;
-  width: auto;
-  height: 500px;
+  display: block;  /* כדי להסיר רווחים מיותרים מתחת לתמונה */
+  transform: rotate(10deg);
+  width: 500px;
+  height: 470px; /* גובה בסיסי */
+  border-radius: 8px;
+  margin-top: -650px;
+  margin-left: 700px;
+  position: relative;
+  /* top: 100px; */
+  /*
+  t כדי שהתמונה לא תחרוג מהרוחב */
 }
+
+/* כלל חדש עבור העוטף */
+.header-content {
+  text-align: center; /* למרכז את התוכן בתוך ה-header-content */
+  padding-top: 150px; /* מרווח מהחלק העליון (מתחת ל-navbar) */
+  margin-bottom: 50px; /* מרווח מתחת לכל החלק הזה לפני הקונטיינר */
+}
+.container2{
+  width: 922.63px;
+  /* height: 2598.68px; */
+  position: relative;
+   margin: auto;
+   /* z-index: 3; */
+ }
+ .step{
+  width: 862.63px;
+  height: 434.58px;
+  margin: auto;
+  margin-top: 5px;
+  z-index: 2;
+ }
+
+ .Step_img{
+  width: 411.31px;
+  height: 411.31px;
+   position: absolute;
+   z-index: 1;
+   
+ }
+ 
+ .step_title{
+  position: absolute;
+  margin-bottom: 70px;
+   left: 50%;
+   top:10px;
+  transform: translate(-50%,);
+   margin: 0;
+   color: #a066fd;
+   font-weight: 800;
+   font-size: 1.6875rem;
+        line-height: 1.4;
+ }
+ .step_Melal{
+  position: absolute;
+  margin-bottom: 70px;
+   left: 49%;
+   top:90px;
+  transform: translate(-0%,);
+ }
+#step1{
+    position: relative;
+   margin: auto;
+   text-align: center;
+   color:  #a066fd;
+
+}
+#step3{
+  width: 862.63px;
+  height: 434.58px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse; /* תמונה מימין, טקסט משמאל */
+  align-items: flex-start;
+  /* top:-2100px; */
+  margin-top: 10px;
+  
+}
+
+#step3 .Step_img {
+  width: 411.31px;
+  height: 411.31px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  z-index: 1;
+}
+
+#step3 .step_title ,#step5_title    {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  margin: 0;
+  color: #a066fd;
+  font-weight: 800;
+  font-size: 1.6875rem;
+  line-height: 1.4;
+  text-align: left;
+  direction: ltr;
+  max-width: 400px;
+}
+
+#step3 .step_Melal {
+  position: absolute;
+  left: 0;
+  top: 90px;
+  margin: 0;
+  text-align: left;
+  direction: ltr;
+  max-width: 400px;
+}
+#step3_title2{
+  position: absolute;
+  left: 0;
+  top: 45px;
+  margin: 0;
+  color: #a066fd;
+  font-weight: 800;
+  font-size: 1.6875rem;
+  line-height: 1.4;
+  text-align: left;
+  direction: ltr;
+  max-width: 400px;
+}
+#step4{
+  width: 862.63px;
+  height: 434.58px;
+  margin: auto;
+  /* margin-top: -4200px; */
+  position: relative;
+  display: flex;
+  top:10px;
+  z-index: 2;
+}
+#step4_img{
+   background-repeat:no-repeat;
+}
+#step4 .step_Melal{
+  max-width: 400px;
+}
+#step5 {
+  width: 862.63px;
+  height: auto;
+  margin: auto;
+  position: relative;
+  align-items: flex-start;
+  margin-top: 50px;
+  gap: 20px; /* רווח בין התמונה לטקסט */
+}
+
+#step5 .Step_img {
+  width: 411.31px;
+  height: 411.31px;
+  flex-shrink: 0;
+  position: absolute;
+}
+
+#step5_title2 {
+  position: absolute;
+  left: 0;
+  top: 45px;
+  margin: 0;
+  color: #a066fd;
+  font-weight: 800;
+  font-size: 1.6875rem;
+  line-height: 1.4;
+  text-align: left;
+  direction: ltr;
+  max-width: 400px;
+   margin-left: -430px;
+}
+
+#step5 .step_title {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  margin: 0;
+  color: #a066fd;
+  font-weight: 800;
+  font-size: 1.6875rem;
+  line-height: 1.4;
+  text-align: left;
+  direction: ltr;
+  max-width: 400;
+  margin-left: -430px;
+  
+}
+
+#step5 .step_Melal {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  line-height: 1.4;
+  text-align: left;
+  direction: ltr;
+  max-width: 400px;
+  margin-left: -430px;
+}
+  .accordion {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+    
+  }
+  .accordion:hover {
+    background-color: #ddd;
+  }
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+  .arrow.open {
+    transform: rotate(90deg);
+  }
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    font-size: 16px;
+    padding: 0 15px;
+    background-color: #f9f9f9;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 15px;
+  }
+  .content.open {
+    max-height: 300px; /* מספיק כדי להציג תוכן */
+    padding: 10px 15px;
+  }
+
 .h3{
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
+  
+}
 
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto; /* למרכז את הקונטיינר */
+    margin-bottom: 50px; /* מרווח תחתון מה-body */
+    box-sizing: border-box; /* לוודא שה-padding לא מוסיף לרוחב הכללי */
 }
-.steps_Img{
-    width: 411.31px;
-    height: 411.31px;
-    margin-top:200px
-      z-index: 100;
+
+h1 {
+    color: #30064e;
+    margin-bottom: 1px;
+    text-align: center;
 }
-.steps_div{
-  color: red;
-  z-index: 99;
+
+/*h2 {
+    color: #61397d;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}*/
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+.search-box, .summarize-box { /* סגנון משותף לשתי תיבות הקלט */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* כדי שהאלמנטים יעברו שורה במובייל */
+}
+
+#searchInput, #linkInput { /* סגנון משותף לשדות הקלט */
+    width: 70%;
+    max-width: 450px; /* רוחב מקסימלי */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box; /* כדי שה-padding לא יוסיף לרוחב */
+    left: 200px;
+}
+
+#searchButton, #summarizeButton { /* סגנון משותף לכפתורים */
+    padding: 12px 20px;
+    background-color: #9d00ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px; /* רווח מימין לשדה הקלט */
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover, #summarizeButton:hover {
+    background-color: #490175;
+}
+
+.results-container {
+    text-align: right;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+   padding-bottom: 100px;
+    padding: 10px 15px;
+    margin-bottom: 1000px;
+    z-index: 999 !important;
+    position: relative;
+}
+
+.result-item {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+      z-index: 998 !important;
+}
+
+.result-item h3 {
+    margin-top: 0;
+    color: #007bff;
+    margin-bottom: 15px;
+    z-index: 998 !important;
+}
+
+.result-item p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 10px;
+      z-index: 999;
+      z-index: 998 !important;
+  
+   
+}
+
+.result-item a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 999 !important;
+}
+
+.result-item a:hover {
+    text-decoration: underline;
+   
+}
+
+.no-results {
+    color: #777;
+    font-size: 16px;
+    text-align: center; /* כדי שיופיע במרכז כשאין תוצאות */
+    padding: 10px;
+}
+
+.summary-content {
+    background-color: #e6f7ff;
+    border: 1px solid #b3e0ff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: right;
+    color: #333;
+    line-height: 1.6;
+    z-index: 999;
+    position: relative;
+    top: 20px;
+    margin-top: 20px;
+ 
+  
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* זה ממורכז את התמונות בתוך הגלריה */
+    gap: 10px;
+    width: 100%; /* וודא שהוא תופס את כל הרוחב הזמין בתוך ההורה שלו */
+    margin: 0 auto; /* לוודא מרכוז עצמי אם לא כל הרוחב תפוס */
+}
+
+.image-wrapper {
+  width: calc(20% - 16px);
+  max-width: 280px;
+  overflow: hidden;
+  border: 2px solid #9d00ff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clickable-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-wrapper:hover {
+    transform: scale(1.05);
+    border-color: #490175;
+}
+
+/* ************ שינויים עבור תפריט המבורגר ************ */
+
+/* הסתרת כפתור ההמבורגר כברירת מחדל במסכים גדולים */
+.ul1 .icon {
+  display: none;
+}
+
+/* עוטף הקישורים */
+.nav-links {
+  display: flex; /* כדי שהקישורים יהיו אופקיים בדסקטופ */
+  align-items: center;
+  /* שינויים: הסרנו flex-grow: 1; ושינינו justify-content */
+  justify-content: flex-start; /* יישור לימין */
+}
+
+/* הלינקים עצמם בתוך העוטף */
+.nav-links li {
+  margin: 0; /* איפוס מרווחים מלי ברירת מחדל */
+}
+
+/* ************ סיום שינויים עבור תפריט המבורגר ************ */
+
+
+/* רספונסיביות */
+@media (max-width: 1200px) {
+  .ul1 {
+    height: 12%;
+  }
+  #img1 {
+    height: 100px;
+  }
+  li a {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+  .ul1 button { /* אם יש כפתורים כלשהם */
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  .title {
+    font-size: 60px !important;
+  }
+  .header-content {
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ul1 {
+    height: 10%;
+  }
+  #img1 {
+    height: 80px;
+    margin-right: 15px;
+  }
+  li a {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+  .ul1 button {
+    padding: 8px 15px;
+    font-size: 16px;
+  }
+  .title {
+    font-size: 50px !important;
+  }
+  .header-content {
+    padding-top: 130px;
+  }
+  .image-wrapper {
+      width: calc(25% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .ul1 {
+    /* גובה אוטומטי כשנפתח */
+    height: auto;
+    /* במובייל הופך להיות Flex Column */
+    flex-direction: column;
+    align-items: flex-start; /* יישור לשמאל בהמבורגר */
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    overflow: visible; /* מאפשר לתפריט להיפתח */
+  }
+
+  .ul1 #img1 {
+    height: 60px;
+    margin: 10px 15px; /* מרווח מהצדדים ומהלוגו */
+  }
+
+  /* כפתור ההמבורגר גלוי רק במובייל */
+  .ul1 .icon {
+    display: block; /* הצגה */
+    position: absolute; /* מיקום מוחלט ביחס ל-ul1 */
+    right: 20px; /* בצד ימין */
+    top: 20px; /* בחלק העליון */
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px; /* מרווח סביב לאייקון */
+  }
+
+  /* הסתרת הקישורים כברירת מחדל במובייל */
+  .nav-links {
+    display: none;
+    flex-direction: column; /* הקישורים בטור כשהם גלויים */
+    width: 100%; /* יתפסו את כל הרוחב */
+    text-align: center; /* מרכז טקסט */
+  }
+
+  /* כשהתפריט פתוח (nav-links.responsive) */
+  .nav-links.responsive {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%; /* כל לינק יתפרס על כל הרוחב */
+  }
+
+  .nav-links li a {
+    padding: 10px 0; /* ריווח ללינקים בתפריט המבורגר */
+    font-size: 18px;
+    border-bottom: 1px solid #eee; /* קו הפרדה בין לינקים */
+  }
+
+  /* הסרת קו הפרדה מהלינק האחרון */
+  .nav-links li:last-child a {
+    border-bottom: none;
+  }
+
+  .title{
+    font-size: 40px !important;
+  }
+  .header-content {
+    padding-top: 100px;
+  }
+  .presentation_img{
+    height: 300px;
+    position: absolute;
+    top: 2000px;
+    margin-top: 2000px;
+    z-index: 999;
+  }
+  .container {
+    max-width: 380px;
+    padding: 20px;
+  }
+  #searchInput, #linkInput {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  #searchButton, #summarizeButton {
+    width: 90%;
+    margin-left: 0;
+  }
+  .search-box, .summarize-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-wrapper {
+      width: calc(33.333% - 13.333px);
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .ul1 #img1 {
+    height: 50px;
+  }
+  .ul1 .icon {
+    top: 15px;
+    right: 15px;
+    font-size: 26px;
+  }
+  .nav-links li a {
+    font-size: 16px;
+  }
+  .title {
+    font-size: 30px !important;
+  }
+  .h3 {
+    font-size: 16px;
+  }
+  .cursor {
+    font-size: 20px;
+    width: 100%;
+  }
+  .presentation_img {
+    height: 200px;
+  }
+  .container {
+    padding: 15px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .image-wrapper {
+      width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 320px) {
+  .ul1 #img1 {
+    height: 40px;
+  }
+  .ul1 .icon {
+    font-size: 24px;
+  }
+  .nav-links li a {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 25px !important;
+  }
+  .h3 {
+    font-size: 14px;
+  }
+  .cursor {
+    font-size: 18px;
+  }
+  .image-wrapper {
+      width: 100%;
+  }
+}
+@media (max-width: 768px) {
+ .Step_img {
+    display: none !important;
+  }
+   .step_Melal{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   left: 50%;
+   transform: translate(-50%,);
+  }
+     #step3{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   left: 20%;
+  }
+  #step4{
+    right: 25%;
+  }
+  #step5{
+  left: 110%;
+  }
+  #step5_title{
+    left: 50%;
+    margin-left: 50%;
+
+  }
+#step2 {
+    position: relative; /* לוודא שזו זרימה רגילה */
+    left: -10%;         /* להסיר כל הזחה שמאלית */
+    margin: 0 auto;     /* למרכז את האלמנט אופקית */
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* למרכז תוכן אופקית */
+    justify-content: center;  /* למרכז תוכן אנכית */
+    width: 90%;               /* להגדיר רוחב מתאים למובייל */
+  }
+  
+  /* במידה ויש אלמנטים בתוך #step2 כמו .step_Melal */
+  #step2 .step_Melal {
+    position: relative;       /* להסיר absolute אם קיים */
+    left: auto;
+    transform: none;          /* להסיר כל תזוזה */
+    text-align: center;       /* למרכז טקסט אם יש */
+    max-width: 100%;          /* להרחיב למלוא רוחב ההורה */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #step2 .step_title{
+    left: 17%;
+    top:20;
+  }
 }

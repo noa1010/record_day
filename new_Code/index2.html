@@ -13,27 +13,153 @@
 </meta>
 </head>
 <body>
-    
+
 <ul class="ul1" id="myNavBar">
      <a href="#home"><img id="img1" src="../media/logo.png" ></a>
-    <li><a  href="#sources">sources </a></li>
-    <li><a  href="#Summary">Summary </a></li>
-    <li><a  href="#Deck">Deck</a></li>
-    <li><a  href="#presentation">presentation</a></li>
-
-    
+     <div class="nav-links"> <li><a  href="#sources">sources </a></li>
+        <li><a  href="#Summary">Summary </a></li>
+        <li><a  href="#Deck">Deck</a></li>
+        <li><a  href="#presentation">presentation</a></li>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"> &#9776;
+    </a>
   </ul>
   <div id="home"></div>
   <br><br><br>
-<h1 class="title cursor typewriter-animation" >project with no stress</h1><br><br>
-<h3 class="h3">Everything for good work and an impressive presentation - in one place
-</h3>
-<div><img id="background2" src="../media/background2.png" >
-<img class="presentation_img" src="../media/presentation.png" >
-<h1 class="h3">Ready to<br> start?</h1><p>tttt</p></div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div class="steps_div"><img class="steps_Img" src="../media/logo.png" ></a>
-<div class="steps_Melal"><br><br><br><h3></h3></div></div>
-<h2></h2>
+  <div class="header-content">
+    <h1 class="title cursor typewriter-animation" >project with no stress</h1>
+    <h3 class="h3">Everything for good work and an impressive presentation - in one place</h3>
+    
+    <br><br><br><br><br><br><br><br> <img class="background2" src="../media/background2.png" >
+        <img class="presentation_img" src="../media/presentation.png" /><h2>blabla</h2>
+    <h1 class="h3" id="Ready">Ready to<br> start?</h1>
+  </div>
+  <h2></h2><br> <br><br> <br><br> <br><br> <div id="sources"></div>
+  <div id="step1" ><h2  >Step 1- Choosing a topic</h2><p>It can be about any topic you want from the French War to riding flying penguins.</p><hr></div>
+  <div class="container2"><div class="step"  id="step2"><img class="Step_img" src="../media/background2.png" ><h2 class="step_title">Step 2- Finding relevant information</h2><div class="step_Melal"> <h3>Search by keywords</h3>
+      <p>For a quick and efficient search, enter a relevant keyword or search topic. SlideUp displays information from Wikipedia only.</p>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Enter a keyword or topic to search...">
+            <button id="searchButton">Search </button>
+        </div><div id="Summary"></div>
+        <div id="results" class="results-container">
+            </div></div></div></div><br>
+            <div class="container2"><div class="step" id="step3" ><img class="Step_img" src="../media/background2.png" ><h2 class="step_title" id="step3_title">Step -Summarizing the </h2><br><br><h2  id="step3_title2">information</h2><div class="step_Melal" id="step3_Melal"> <h3>Getting a summary from a Wikipedia link</h3>
+      <p>SlideUp allows you to get a focused summary of a paragraph from a link, with the service working with Wikipedia only.</p>
+        <div class="summarize-box">
+            <input type="url" id="linkInput" placeholder="Insert a link to the Wikipedia entry...">
+            <button id="summarizeButton">Sum-up</button>
+        </div>
+        <div id="summaryResults" class="results-container"><div id="Deck"></div>
+            </div>
+        </div><div>
+        </div></div></div><br>
+  <div class="container2"><div class="step" id="step4"><img id="step4_img"class="Step_img" src="../media/background2.png" ><h2 class="step_title">Step 4- Preparing the presentation</h2><div class="step_Melal"> 
+      <h3>Sample presentations</h3>
+        <p>We provide links to sample presentations that you can edit and customize to your needs.</p>
+          <div class="gallery-container">
+        <div class="image-wrapper" data-href="https://www.google.com">
+            <img src="https://i.ytimg.com/vi/C8uyzyKA8Sg/maxresdefault.jpg" alt="תמונה 1" class="clickable-image"onclick="img1()">
+        </div>
+        <div class="image-wrapper" data-href="https://www.youtube.com">
+            <img src="https://i.ytimg.com/vi/C8uyzyKA8Sg/maxresdefault.jpg" alt="תמונה 2" class="clickable-image"onclick="img2()">
+        </div>
+        <div class="image-wrapper" data-href="https://www.ynet.co.il">
+            <img src="https://i.ytimg.com/vi/C8uyzyKA8Sg/maxresdefault.jpg" alt="תמונה 3" class="clickable-image"onclick="img3()">
+        </div>
+        <div class="image-wrapper" data-href="https://www.walla.co.il">
+            <img src="https://i.ytimg.com/vi/C8uyzyKA8Sg/maxresdefault.jpg" alt="תמונה 4" class="clickable-image"onclick="img4()">
+        </div>
+        <div class="image-wrapper" data-href="https://www.sport5.co.il">
+            <img src="https://i.ytimg.com/vi/C8uyzyKA8Sg/maxresdefault.jpg" alt="תמונה 5" class="clickable-image"onclick="img5()">
+        </div>
+        <div class="image-wrapper" data-href="https://www.mako.co.il">
+            <img src="https://i.ytimg.com/vi/C8uyzyKA8Sg/maxresdefault.jpg" alt="תמונה 6" class="clickable-image"onclick="img6()">
+        </div>
+        <div class="image-wrapper" data-href="https://www.facebook.com">
+            <img src="https://i.ytimg.com/vi/C8uyzyKA8Sg/maxresdefault.jpg" alt="תמונה 7" class="clickable-image"onclick="img7()">
+        </div>
+        <div class="image-wrapper" data-href="https://www.instagram.com">
+            <img src="https://i.ytimg.com/vi/C8uyzyKA8Sg/maxresdefault.jpg" alt="תמונה 8" class="clickable-image" onclick="img8()">
+        </div>
+        <div class="image-wrapper" data-href="https://www.linkedin.com">
+            <img src="https://i.ytimg.com/vi/C8uyzyKA8Sg/maxresdefault.jpg" alt="תמונה 9" class="clickable-image" onclick="img9()">
+        </div>
+        <div class="image-wrapper" data-href="https://www.twitter.com">
+            <img src="https://i.ytimg.com/vi/C8uyzyKA8Sg/maxresdefault.jpg" alt="תמונה 10" class="clickable-image" onclick="img10()">
+        </div>
+        </div><br><br><br><br><br><br><br><br><div id="presentation"></div>
+<div class="step" id="step5">
+  <img class="Step_img" src="../media/background2.png">
+  <div class="text-content">
+    <h2 class="step_title">Step 5- Present the </h2><h2 id="step5_title2">presentation</h2>
+    <div class="step_Melal" id="step5_Melal">
+      <div class="accordion">
+  <div>Master the material </div>
+  <div class="arrow">&#9654;</div>
+</div>
+<div class="content">
+<p>While you don't write down everything you say on the slides, it is essential that you master the material well. Practice several times, this way you will be able to say what is on each slide, even without having to read.</p>
+</div>
+
+<div class="accordion">
+  <div>Eye contact</div>
+  <div class="arrow">&#9654;</div>
+</div>
+<div class="content">
+  <p>
+  Make eye contact with the audience. This builds trust and engagement. Try scanning your room for different people throughout the presentation.</p>
+
+</div>
+
+<div class="accordion">
+  <div>Tone and Pace</div>
+  <div class="arrow">&#9654;</div>
+</div>
+<div class="content">
+  <p>Speak in a clear tone and at a pace that allows the audience to follow. Incorporate changes in tone and pace to avoid monotony and maintain interest.</p>
+</div>
+
+<div class="accordion">
+  <div>Body Language</div>
+  <div class="arrow">&#9654;</div>
+</div>
+<div class="content">
+  <p>Stand firm and confident. Use natural hand gestures to emphasize points, but avoid nervous or aimless movements. Don’t turn your back to the audience to read from the slide – remember, the slide is just a reference point.</p>
+</div>
+
+<div class="accordion">
+  <div>Audience Interaction</div>
+  <div class="arrow">&#9654;</div>
+</div>
+<div class="content">
+  <p>Ask questions, encourage questions from the audience, and if appropriate, incorporate short exercises or discussions. This breaks up the routine and increases the level of engagement.</p>
+</div>
+
+<div class="accordion">
+  <div>Strong Beginnings and Ends</div>
+  <div class="arrow">&#9654;</div>
+</div>
+<div class="content">
+  <p>Open your presentation with a “hook” – a surprising statement, an interesting question, or a short story that will grab the audience’s attention. End with a clear summary of the main points and a “call to action” or key message that you want the audience to take away.</p>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // תופס את כל הכותרות והמלל
+  const accordions = document.querySelectorAll('.accordion');
+  accordions.forEach((acc, i) => {
+    acc.addEventListener('click', () => {
+      const content = acc.nextElementSibling;
+      const arrow = acc.querySelector('.arrow');
+      content.classList.toggle('open');
+      arrow.classList.toggle('open');
+    });
+  });
+</script>
+
+
 </body>
 </html>
