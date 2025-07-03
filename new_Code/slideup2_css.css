@@ -298,17 +298,17 @@ li a:hover {
   height: 434.58px;
   margin: auto;
   /* margin-top: -4200px; */
-  position: relative;
+  /* position: relative; */
   display: flex;
   top:10px;
-  z-index: 2;
+  z-index:1;
 }
 #step4_img{
    background-repeat:no-repeat;
 }
-#step4 .step_Melal{
+/* #step4 .step_Melal{
   max-width: 400px;
-}
+} */
 #step5 {
   width: 862.63px;
   height: auto;
@@ -664,6 +664,7 @@ hr {
 }
 
 @media (max-width: 768px) {
+  
   .ul1 {
     /* גובה אוטומטי כשנפתח */
     height: auto;
@@ -837,13 +838,17 @@ hr {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   left: 20%;
+   left: 5%;
   }
   #step4{
-    right: 25%;
+      display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   right: 25%;
   }
   #step5{
-  left: 110%;
+  /* left: 110%; */
   }
   #step5_title{
     left: 50%;
@@ -863,8 +868,19 @@ hr {
   
   /* במידה ויש אלמנטים בתוך #step2 כמו .step_Melal */
   #step2 .step_Melal {
-    position: relative;       /* להסיר absolute אם קיים */
-    left: auto;
+    /* position: relative;       להסיר absolute אם קיים */
+    left: inherit;
+    transform: none;          /* להסיר כל תזוזה */
+    text-align: center;       /* למרכז טקסט אם יש */
+    max-width: 100%;          /* להרחיב למלוא רוחב ההורה */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+   #step4 .step_Melal {
+    /* position: relative;       להסיר absolute אם קיים */
+    left: inherit;
     transform: none;          /* להסיר כל תזוזה */
     text-align: center;       /* למרכז טקסט אם יש */
     max-width: 100%;          /* להרחיב למלוא רוחב ההורה */
