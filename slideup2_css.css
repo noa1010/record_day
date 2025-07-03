@@ -299,7 +299,7 @@ li a:hover {
   margin: auto;
   /* margin-top: -4200px; */
   /* position: relative; */
-  display: flex;
+
   top:10px;
   z-index:1;
 }
